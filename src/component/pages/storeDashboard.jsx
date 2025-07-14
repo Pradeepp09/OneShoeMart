@@ -29,7 +29,7 @@ const StoreDashboard = () => {
 
   const fetchStoreData = async (storeId, token) => {
     try {
-      const res = await fetch(`https://oneshoemart-server.onrender.com/api/store/me`, {
+      const res = await fetch(`${process.env.REACT_APP_API_BASE}/api/store/me`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();

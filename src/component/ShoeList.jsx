@@ -10,7 +10,7 @@ const ShoeList = () => {
   useEffect(() => {
     const fetchShoes = async () => {
       try {
-        const response = await fetch('https://oneshoemart-server.onrender.com/api/shoes');
+        const response = await fetch(`${process.env.REACT_APP_API_BASE}/api/shoes`);
         const data = await response.json();
         setShoes(data);
       } catch (error) {
