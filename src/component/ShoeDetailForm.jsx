@@ -54,7 +54,7 @@ const ShoeDetailForm = () => {
     data.append('price', formData.price);
 
     try {
-      const res = await fetch('http://localhost:5000/api/shoes', {
+      const res = await fetch('https://oneshoemart-server.onrender.com/api/shoes', {
         method: 'POST',
         body: data,
       });

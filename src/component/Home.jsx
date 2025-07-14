@@ -22,7 +22,7 @@ const Home = () => {
   useEffect(() => {
     const fetchShoes = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/shoes');
+        const res = await fetch('https://oneshoemart-server.onrender.com/api/shoes');
         if (!res.ok) throw new Error('Failed to fetch shoes');
         const data = await res.json();
         setShoes(data.slice(0, 6)); // Show top 6 shoes only
